@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>電気電子工学特論 完全網羅過去問題集</title>
+
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']]
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
+            background-color: #f4f7f9;
+            color: #333;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 850px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 30px;
+        }
+
+        .quiz-card {
+            background: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+            padding: 25px;
+            margin-bottom: 25px;
+            border-top: 5px solid #3498db;
+            position: relative;
+        }
+
+        .source-info {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            font-size: 0.75em;
+            color: #e74c3c;
+            text-align: right;
+            max-width: 250px;
+            font-weight: bold;
+        }
+
+        .theme-label {
+            display: inline-block;
+            background-color: #e1f0fa;
+            color: #2980b9;
+            padding: 4px 12px;
+            border-radius: 5px;
+            font-size: 0.85em;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .question {
+            font-size: 1.1em;
+            font-weight: bold;
+            margin-bottom: 20px;
+            padding-right: 80px;
+        }
+
+        .sub-question {
+            margin-bottom: 10px;
+            padding-left: 15px;
+            border-left: 3px solid #bdc3c7;
+        }
+
+        .image-placeholder {
+            background-color: #f9f9f9;
+            border: 2px dashed #bdc3c7;
+            padding: 15px;
+            text-align: center;
+            color: #7f8c8d;
+            margin-bottom: 20px;
+            border-radius: 6px;
+        }
+
+        .image-placeholder img {
+            width: auto;
+            height: 250px;
+            border-radius: 4px;
+            display: block;
+            margin: 0 auto 10px auto;
+        }
+
+        .toggle-btn {
+            background-color: #3498db;
+            color: #ffffff;
+            border: none;
+            padding: 12px 20px;
+            font-size: 1em;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background 0.3s;
+            display: block;
+            width: 100%;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .toggle-btn:hover {
+            background-color: #2980b9;
+        }
+
+        .answer {
+            display: none;
+            margin-top: 20px;
+            padding: 18px;
+            background-color: #f9fefb;
+            border-left: 5px solid #2ecc71;
+            border-radius: 0 6px 6px 0;
+            color: #2c3e50;
+        }
+
+        .answer.show {
+            display: block;
+            animation: fadeIn 0.4s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-8px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .section-header {
+            background: #2c3e50;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 6px;
+            margin: 40px 0 20px 0;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+
+        .point {
+            color: #e74c3c;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>電気電子工学特論 完全網羅過去問題集</h1>
+        <p style="text-align:center;">過去問データ（2022年等）からの出題内容をすべて網羅しています。</p>
+
+        <div class="section-header">第1部：電子材料分析評価法（堀江先生）</div>
+
+        <div class="quiz-card">
+            <div class="source-info">過去問出題</div>
+            <div class="theme-label">X線と電子線</div>
+            <div class="question">問1: X線と電子線の特徴を2つずつ列挙せよ。</div>
+            <button class="toggle-btn" onclick="toggleAnswer('ans1')">解答を表示 / 非表示</button>
+            <div id="ans1" class="answer">
+                <strong>X線:</strong><br>
+                ・絞れない（局所分析が苦手）<br>
+                ・大気中で散乱しない（空気中での測定が可能）<br><br>
+                <strong>電子線:</strong><br>
+                ・絞れる（局所分析が得意）<br>
+                ・大気中で散乱する（真空装置が必要）
+            </div>
+        </div>
+
+        <div class="quiz-card">
+            <div class="source-info">過去問出題</div>
+            <div class="theme-label">電子線励起プロセス</div>
+            <div class="question">問2: 次の括弧を埋めよ。
+            </div>
+            <div class="image-placeholder">
+                <img src="Fig1.png" alt="原子構造">
+            </div>
+            <button class="toggle-btn" onclick="toggleAnswer('ans2')">解答を表示 / 非表示</button>
+            <div id="ans2" class="answer">
+                ・<strong><small><small>12</small></small>Al</strong><br>
+                ・<strong>ア: 特性X線:</strong> 内殻電子が抜け、外殻電子が落ちる際のエネルギー差が電磁波として放出される。<br>
+                ・<strong>イ: 反射電子(高速電子)</strong><br>
+                ・<strong>ウ: L殻</strong><br>
+                ・<strong>エ: M殻</strong><br>
+                <strong>オージェ電子</strong>、<strong>入射X線</strong>も覚えると吉。
+            </div>
+        </div>
+
+        <div class="quiz-card">
+            <div class="source-info">過去問出題</div>
+            <div class="theme-label">はやぶさ採取物質の分析(1)</div>
+            <div class="question">問3: はやぶさが採取した物質（イトカワのサンプルなど）の表面観察画像を撮影した「分析法」と、その「励起源（プローブ）」および「信号源」を答えよ。</div>
+            <div class="image-placeholder">
+                <img src="Fig2.png" alt="ハヤブサが採取した物質の写真">
+            </div>
+            <button class="toggle-btn" onclick="toggleAnswer('ans3')">解答を表示 / 非表示</button>
+            <div id="ans3" class="answer">
+                ・<strong>分析法:</strong> SEM（走査型電子顕微鏡）<br>
+                ・<strong>励起源（プローブ）:</strong> 電子線<br>
+                ・<strong>信号源:</strong> 二次電子（オージェ電子）
+            </div>
+        </div>
+
+        <div class="quiz-card">
+            <div class="source-info">過去問出題</div>
+            <div class="theme-label">はやぶさ採取物質の分析(2)</div>
+            <div class="question">問4:
+                問3のイトカワ採取物について、人工物と見分けたり、鉄とマグネシウムの比率を調べる（元素分析）ために用いられた分析法およびそのプローブと信号源と、その一般的な特徴を答えよ。</div>
+            <button class="toggle-btn" onclick="toggleAnswer('ans4')">解答を表示 / 非表示</button>
+            <div id="ans4" class="answer">
+                ・<strong>分析法:</strong> EPMA（電子プローブマイクロアナライザ）<br>
+                ・<strong>励起源（プローブ）:</strong> 電子線<br>
+                ・<strong>信号源:</strong> オージェ電子<br>
+                ・<strong>特徴:</strong> 電子線を細く絞ることができるため、微小部分分析（局所分析）が可能である。
+            </div>
+        </div>
+
+        <div class="quiz-card">
+            <div class="source-info">過去問出題</div>
+            <div class="theme-label">XRF分析法</div>
+            <div class="question">問5: 励起源（プローブ）が「X線」で、信号源が「問1の(ア)」の分析方法とその特徴を書け。</div>
+            <button class="toggle-btn" onclick="toggleAnswer('ans5')">解答を表示 / 非表示</button>
+            <div id="ans5" class="answer">
+                ・<strong>分析法:</strong> XRF（蛍光X線分析）<br>
+                ・<strong>特徴:</strong> 大気中でも測定が可能であるため真空引きが必要なく、分析が迅速で試料の準備が楽。また、非破壊分析であり、化学的状態に影響されず、定性分析が容易である。
+            </div>
+        </div>
+
+        <div class="quiz-card">
+            <div class="source-info">過去問出題</div>
+            <div class="theme-label">XPS分析法</div>
+            <div class="question">問6: 電子線(軟X線)をプローブとして「問1の(イ)」を信号源とした分析法とその一般的な特徴を書け。</div>
+            <button class="toggle-btn" onclick="toggleAnswer('ans6')">解答を表示 / 非表示</button>
+            <div id="ans6" class="answer">
+                ・<strong>分析法:</strong> XPS（X線光電子分光法 / またはESCA）<br>
+                ・<strong>特徴:</strong>
+                光電子は試料途中で散乱されやすいため、試料の表面数nmのみの光電子のエネルギーを検出し、元素分析や化学結合状態の分析が可能。資料は高真空中で脱ガスしない(乾燥した)導電性のある固体である必要がある。
+            </div>
+        </div>
+
+        <div class="quiz-card">
+            <div class="source-info">過去問出題</div>
+            <div class="theme-label">分析法の選択</div>
+            <div class="question">問7: 分析法を選択する上で留意すべきこと（考慮すべき点）を3つ挙げよ。</div>
+            <button class="toggle-btn" onclick="toggleAnswer('ans7')">解答を表示 / 非表示</button>
+            <div id="ans7" class="answer">
+                1. 情報を得たい場所と範囲（最表面か内部か、局所か平均か）。<br>
+                2. 試料の性質（導電性の有無、真空中で安定か、破壊可能か）。<br>
+                3. 知りたい情報の内容（元素の種類、含有量、化学結合状態、構造観察など）。
+            </div>
+        </div>
+
+        <div class="section-header">第2部：半導体デバイス分野（青野先生）</div>
+
+        <div class="quiz-card">
+            <div class="source-info">2022年 過去問 問1</div>
+            <div class="theme-label">光学特性とバンド図</div>
+            <div class="question">問8: 金属、半導体、絶縁体の光学特性について、バンド図を用いて説明せよ。</div>
+
+            <button class="toggle-btn" onclick="toggleAnswer('ans8')">解答を表示 / 非表示</button>
+            <div id="ans8" class="answer">
+                <div class="image-placeholder">
+                    <img src="Fig3.png" alt="固体のバンド構造">
+                </div>
+                ・<strong>金属（銀色）:</strong> 自由電子が常に空帯（伝導帯）の一部に存在しているため。<br><br>
+                ・<strong>半導体（有色）:</strong> 電子が存在する価電子帯と移動のための伝導帯が離れているが、禁制帯幅が比較的狭いため、可視光（約1〜3
+                eV）の励起エネルギーでも電子が励起できるため。<br><br>
+                ・<strong>絶縁体（透明）:</strong> 半導体と同様に価電子帯と伝導帯が離れているが、禁制帯幅が広く可視光では励起されない（それ以上のエネルギーが必要な）ため。
+            </div>
+        </div>
+
+        <div class="quiz-card">
+            <div class="source-info">2022年 過去問 問2</div>
+            <div class="theme-label">pn接合 (○×問題)</div>
+            <div class="question">問9: pn接合に関する以下の記述について、正しいものには○、誤っているものには×をつけ、誤っている場合はその理由を簡潔に述べよ。
+                <div class="sub-question">2.1 p型に(+)、n型に(ー)をかける時を順方向電圧という。</div>
+                <div class="sub-question">2.2 熱平衡時にp型とn型のフェルミ準位がそろう。</div>
+                <div class="sub-question">2.3 p型に(+)の電圧、n型に(ー)の電圧をかけると、電位が上がりp型の多数キャリアはp型に移動をする。</div>
+                <div class="sub-question">2.4 p型に(ー)、n型に(+)の電圧をかけると、少数キャリアの移動は印加電圧の影響を受ける。</div>
+                <div class="sub-question">2.5 逆方向に電圧を強くかけると急激に電流が流れる。この時の電圧を降伏電圧という。</div>
+            </div>
+            <button class="toggle-btn" onclick="toggleAnswer('ans9')">解答を表示 / 非表示</button>
+            <div id="ans9" class="answer">
+                2.1 <strong>○</strong><br>
+                2.2 <strong>○</strong><br>
+                2.3 <strong>×</strong> (理由: 電位は「下がる」。また順方向バイアスにより、多数キャリアは接合部を超えて相手側へ移動・注入される。)<br>
+                2.4 <strong>×</strong> (理由: 逆バイアス時、少数キャリアによるごくわずかな電流（逆方向飽和電流）が流れるが、これは印加電圧の大きさにはほとんど影響を受けない。)<br>
+                2.5 <strong>○</strong>
+            </div>
+        </div>
+
+        <div class="quiz-card">
+            <div class="source-info">2022年 過去問 問3</div>
+            <div class="theme-label">電子と正孔・シリコンの優位性</div>
+            <div class="question">問10: 電子と正孔について、以下の観点から説明せよ。<br>
+                (1) 移動度の違いが生まれる理由。<br>
+                (2) 最初のトランジスタはゲルマニウムだったが、現在シリコンが主流である理由。</div>
+            <button class="toggle-btn" onclick="toggleAnswer('ans10')">解答を表示 / 非表示</button>
+            <div id="ans10" class="answer">
+                (1) 電子は伝導帯を自由に移動するため邪魔なものが少ない。一方、正孔は価電子帯における電子の抜け穴の移動であり、周囲の電子に妨げられるため、電子に比べて移動度が遅い。<br><br>
+                (2) シリコンは地球上に非常に豊富に存在する元素であり、高純度化がしやすいから。また、安定した酸化膜（SiO2）を形成でき、微細化技術に適しているため。
+            </div>
+        </div>
+
+        <div class="quiz-card">
+            <div class="source-info">2022年 過去問 問4</div>
+            <div class="theme-label">半導体トレンド</div>
+            <div class="question">問11: 半導体の進化のトレンドである「More Moore」と「More than Moore」について具体例を挙げて説明せよ。</div>
+            <button class="toggle-btn" onclick="toggleAnswer('ans11')">解答を表示 / 非表示</button>
+            <div id="ans11" class="answer">
+                ・<strong>More Moore:</strong>
+                ムーアの法則に則って、それをさらに進める考え方である。MOSトランジスタにかかる電界が一定になるように縦方向、横方向を比例縮小する、デバイス構造を工夫して3次元構造にする、新しいプロセス技術を使うなどして、素子サイズより小さくしていくこと
+                で性能を高めようとする動き。<br>
+                ・<strong>More than Moore:</strong>
+                必ずしもムーアの法則に従わないが、いろいろな機能をデバイス
+                に盛り込むことと定義している。つまり多機能化によるデバイスの多様化を目指すものである。例えば、デジタル回路だけではなく、RF通信機能やパワーマネジメント、受動部品やセンサー、アクチュエータの集積なども考慮し、これまで半導体ボード上で展開されていた回路を1パッケージ
+                （System-in-Package:SiP） や 1チップ（System-on-Chip:SoC）へと開発していく流れである。
+            </div>
+        </div>
+
+        <div class="quiz-card">
+            <div class="source-info">予想問題</div>
+            <div class="theme-label">金属-半導体接触</div>
+            <div class="question">問12:
+                金属と半導体の接触において形成される「ショットキー接触」と「オーミック接触」について、金属の仕事関数($\phi_m$)と半導体の仕事関数($\phi_s$)の大小関係、および電流電圧特性の違いを説明せよ。
+            </div>
+            <button class="toggle-btn" onclick="toggleAnswer('ans12')">解答を表示 / 非表示</button>
+            <div id="ans12" class="answer">
+                ・<strong>ショットキー接触:</strong> 金属の仕事関数が半導体の仕事関数より大きい（$\phi_m >
+                \phi_s$）場合に生じる。界面に電子の流れを妨げる障壁が発生するため、整流性を示す。<br><br>
+                ・<strong>オーミック接触:</strong> 金属の仕事関数が半導体の仕事関数より小さい（$\phi_m <
+                    \phi_s$）場合に生じる。電子は電圧によるバンドの曲りの影響を受けないため障壁が実質的になく、オームの法則に従う。<br>
+
+                <div class="image-placeholder">
+                    <img src="Fig4.png" alt="ショットキー接触とオーミック接触の説明">
+                </div>
+                </div>
+            </div>
+
+            <div class="quiz-card">
+                <div class="source-info">予想問題</div>
+                <div class="theme-label">バイポーラトランジスタ</div>
+                <div class="question">問13: バイポーラトランジスタの動作原理について、キャリアの動き（エミッタからコレクタへの流れ）を中心に簡潔に説明せよ。</div>
+                <button class="toggle-btn" onclick="toggleAnswer('ans13')">解答を表示 / 非表示</button>
+                <div id="ans13" class="answer">
+                    2つのpn接合が接近した構造を持ち、多数キャリアと少数キャリアの両方が伝導に寄与する。順バイアスされたエミッタからベースへキャリアが注入されるが、ベース領域の幅が十分に狭いため、注入されたキャリアのほとんどは再結合せずに拡散し、逆バイアスされたコレクタへ到達して大きなコレクタ電流となる。<br>
+                    
+                    <div class="image-placeholder">
+                        <img src="Fig5.png" alt="バイポーラトランジスタの動作原理">
+                    </div>
+                </div>
+            </div>
+
+            <div class="quiz-card">
+                <div class="source-info">予想問題</div>
+                <div class="theme-label">電界効果トランジスタ(FET)</div>
+                <div class="question">問14: 電界効果トランジスタ（FET）は、バイポーラトランジスタと比較してどのような特長があるか説明せよ。</div>
+                <button class="toggle-btn" onclick="toggleAnswer('ans14')">解答を表示 / 非表示</button>
+                <div id="ans14" class="answer">
+                    FETは増幅作用が1種類（電子または正孔のどちらか）のキャリアのみに依存するため「ユニポーラ・デバイス」と呼ばれる。バイポーラトランジスタのような少数キャリアの蓄積効果がないため、スイッチング速度が速いという特長がある。また、ゲート電圧によってチャネルの抵抗値を制御して動作する。<br>
+                    
+                    <div class="image-placeholder">
+                        <img src="Fig6.png" alt="電界効果トランジスタの動作原理">
+                    </div>
+                </div>
+            </div>
+
+            <div class="quiz-card">
+                <div class="source-info">予想問題</div>
+                <div class="theme-label">MOS-FETの動作原理</div>
+                <div class="question">問15: MOS-FETの動作において、ドレイン電圧を大きくしていった際に生じる「ピンチオフ」現象と「飽和領域」について説明せよ。</div>
+                <button class="toggle-btn" onclick="toggleAnswer('ans15')">解答を表示 / 非表示</button>
+                <div id="ans15" class="answer">
+                    ドレイン電圧（$V_D$）を大きくしていくと、ドレイン側の空乏層が広がり、ソース側に向かってチャネルが薄くなる。さらに電圧を上げると、ドレイン側でチャネルの幅がゼロになる。これを<strong>ピンチオフ</strong>という。<br>
+                    ピンチオフが生じた後、さらにドレイン電圧を大きくしてもドレイン電流（$I_D$）は増加せず一定値に落ち着く。この状態を<strong>飽和領域</strong>という。<br>
+                    
+                    <div class="image-placeholder">
+                        <img src="Fig7.png" alt="MOS-FETの動作原理">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <script>
+            function toggleAnswer(answerId) {
+                var answerDiv = document.getElementById(answerId);
+                if (answerDiv.classList.contains('show')) {
+                    answerDiv.classList.remove('show');
+                } else {
+                    answerDiv.classList.add('show');
+                }
+            }
+        </script>
+
+</body>
+
+</html>
